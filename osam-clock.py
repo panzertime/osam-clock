@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import tkinter as tk
 from datetime import datetime, timedelta
 
@@ -35,17 +37,18 @@ class Calendar(tk.Label):
             input -= ints[i] * count
         return ''.join(result)
 
-root = tk.Tk()
-root.tk_strictMotif()
-root.title = "O.S. Anno Mundi"
-#root.resizable(0,0)
-root.wm_attributes("-topmost", True)
+if __name__ == "__main__":
+    root = tk.Tk()
+    root.tk_strictMotif()
+    root.title = "O.S. Anno Mundi"
+    #root.resizable(0,0)
+    root.wm_attributes("-topmost", True)
 
-frame = tk.Frame(root)
-frame.pack()
+    frame = tk.Frame(root)
+    frame.pack()
 
-calendar = Calendar(frame)
-calendar.pack()
+    calendar = Calendar(frame)
+    calendar.pack()
 
-calendar.write()
-root.mainloop()
+    calendar.write()
+    root.mainloop()
